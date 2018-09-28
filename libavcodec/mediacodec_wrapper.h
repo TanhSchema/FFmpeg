@@ -44,7 +44,7 @@
  * implementation.
  *
  * The API around MediaCodecList is not part of the NDK (and is lacking as
- * we still need to retreive the codec name to work around faulty decoders
+ * we still need to retrieve the codec name to work around faulty decoders
  * and encoders).
  *
  * For documentation, please refers to NdkMediaCodec.h NdkMediaFormat.h and
@@ -123,5 +123,7 @@ int ff_AMediaCodec_getBufferFlagKeyFrame(FFAMediaCodec *codec);
 int ff_AMediaCodec_getConfigureFlagEncode(FFAMediaCodec *codec);
 
 int ff_AMediaCodec_cleanOutputBuffers(FFAMediaCodec *codec);
+
+int ff_Build_SDK_INT(AVCodecContext *avctx);
 
 #endif /* AVCODEC_MEDIACODEC_WRAPPER_H */
